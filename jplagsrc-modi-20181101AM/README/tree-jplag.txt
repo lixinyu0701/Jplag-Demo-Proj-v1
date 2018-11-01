@@ -1,0 +1,175 @@
+C:class
+D:dir
+F:file
+P:package
+
+D:jplag
+├───F:pom.xml
+├───D:src/main
+│   ├───D:java/jplag
+│   │   ├───F:AllBasecodeMatches.java
+│   │   ├───F:AllMatches.java
+│   │   ├───F:BufferedCounter.java
+│   │   ├───F:Colors.java
+│   │   │   ┠───P:[1]jplag
+│   │   │   ┗───C:[3]public class Colors
+│   │   │       ┠───[4]static public final String[] colors={}
+│   │   │       ┠───[402]public static String getColor(int i)
+│   │   │       ┗───[406]public static void main(String argsv[])
+│   │   ├───F:ExitException.java
+│   │   ├───F:GIFEncoder.java
+│   │   ├───F:GSTiling.java
+│   │   ├───F:HTMLFile.java
+│   │   ├───F:JPlag.java
+│   │   │   ┠───P:[1]jplag
+│   │   │   ┗───C:[5]public class JPlag
+│   │   │       ┗───[6]public static void main(String[] args)
+│   │   ├───F:Match.java
+│   │   ├───F:Matches.java
+│   │   ├───F:Program.java
+│   │   ├───F:Progress.java
+│   │   ├───F:Report.java
+│   │   ├───F:SortedVector.java
+│   │   ├───F:Submission.java
+│   │   ├───D:clustering
+│   │   │   ├───F:Cluster.java
+│   │   │   ├───F:Clusters.java
+│   │   │   ├───F:SimilarityMatrix.java
+│   │   │   └───F:ThemeGenerator.java
+│   │   ├───D:filter
+│   │   │   ├───F:experiment.txt
+│   │   │   ├───F:Filter.java
+│   │   │   │   ┠───P:[1]jplag.filter
+│   │   │   │   ┗───C:[3]public class Filter
+│   │   │   │       ┠───[4]private int[] table;
+│   │   │   │       ┠───[5]private FilterParser parser;
+│   │   │   │       ┠───[7]public Filter(String fileName)
+│   │   │   │       ┗───[11]public jplag.Structure filter(jplag.Structure struct)
+│   │   │   ├───F:normal.filter
+│   │   │   ├───F:test.filter
+│   │   │   └───F:README.txt
+│   │   └───D:options
+│   │       ├───D:util
+│   │       │   ├───F:Messages.java
+│   │       │   │   ┠───P:[1]jplag.options.util
+│   │       │   │   ┗───C:[10]public class Messages
+│   │       │   │       ┠───[11]private String bundle_name = "jplag.options.util.messages";
+│   │       │   │       ┠───[12]private ResourceBundle res_bund;
+│   │       │   │       ┠───[17]public Messages(String countryTag)
+│   │       │   │       ┠───[23]public String getString(String key)
+│   │       │   │       ┗───[31]public void setBUNDLE_NAME(String bn)
+│   │       │   ├───F:TagParser.java
+│   │       │   └───F:ZipUtil.java
+│   │       ├───F:CommandLineOptions.java
+│   │       ├───F:OptionContainer.java
+│   │       └───F:Options.java
+│   │           ┠───P:[7]package jplag.options
+│   │           ┗───C:[10]public abstract class Options
+│   │               ┠───[17]protected String langs = "jplag.options.util.messages_en";
+│   │               ┠───[19]protected boolean suffixes_set = false;
+│   │               ┠───[21]protected boolean min_token_match_set = false;
+│   │               ┠───[27]protected static String[] languages = {};
+│   │               ┠───[37]public static final int MIN_CLUSTER = 1;
+│   │               ┠───[38]public static final int MAX_CLUSTER = 2;
+│   │               ┠───[39]public static final int AVR_CLUSTER = 3;
+│   │               ┠───[42]public boolean verbose_quiet = false;
+│   │               ┠───[43]public boolean verbose_long = false;
+│   │               ┠───[44]public boolean verbose_parser = false;
+│   │               ┠───[45]public boolean verbose_details = false;
+│   │               ┠───[47]public boolean languageIsFound = false;
+│   │               ┠───[49]public String sub_dir = null;
+│   │               ┠───[50]public String root_dir = null;
+│   │               ┠───[51]public String original_dir = null;
+│   │               ┠───[52]public String result_dir = "result";
+│   │               ┠───[53]public String title = "";
+│   │               ┠───[54]public String output_file = null;
+│   │               ┠───[55]public String exclude_file = null;
+│   │               ┠───[56]public String include_file = null;
+│   │               ┠───[57]public boolean read_subdirs = false;
+│   │               ┠───[59]public int store_matches = 30;
+│   │               ┠───[60]public boolean store_percent = false;
+│   │               ┠───[61]public static final int MAX_RESULT_PAIRS = 1000
+│   │               ┠───[63]public String helper[] = new String[1];
+│   │               ┠───[65]public static final int COMPMODE_NORMAL = 0;
+│   │               ┠───[66]public static final int COMPMODE_REVISION = 1;
+│   │               ┠───[67]public int comparisonMode = COMPMODE_NORMAL;
+│   │               ┠───[69]public int min_token_match;
+│   │               ┠───[71]public String[] suffixes;
+│   │               ┠───[73]public boolean exp = false;
+│   │               ┠───[75]public boolean diff_report = false;
+│   │               ┠───[77]public jplag.filter.Filter filter = null;
+│   │               ┠───[79]public String filtername = ".";
+│   │               ┠───[81]public String basecode = "";
+│   │               ┠───[83]public String commandLine = "";
+│   │               ┠───[86]public boolean externalSearch = false;
+│   │               ┠───[88]public boolean skipParse = false;
+│   │               ┠───[90]public boolean clustering = false;
+│   │               ┠───[92]public boolean useBasecode = false;
+│   │               ┠───[94]public String languageName = null;
+│   │               ┠───[96]public String countryTag = "en";
+│   │               ┠───[98]public float[] threshold = null;
+│   │               ┠───[100]public int[] themewords = { 15 };
+│   │               ┠───[102]public int clusterType = 0;
+│   │               ┠───[104]public int compare = 0;
+│   │               ┠───[106]public SimilarityMatrix similarity = null;
+│   │               ┠───[108]public jplag.Language language;
+│   │               ┠───[111]public boolean fileListMode = false;
+│   │               ┠───[112]public List<String> fileList = new ArrayList<String>();
+│   │               ┠───[114]public boolean debugParser = false;
+│   │               ┠───[118]public static final int PARSING = 100;
+│   │               ┠───[119]public static final int PARSING_WARNINGS = 101;
+│   │               ┠───[120]public static final int COMPARING = 200;
+│   │               ┠───[121]public static final int GENERATING_RESULT_FILES = 250;
+│   │               ┠───[122]public static final int SUBMISSION_ABORTED = 405;
+│   │               ┠───[124]private int int_progress = 0;
+│   │               ┠───[126]private int state = 50;
+│   │               ┠───[128]private boolean forceStop = false;
+│   │               ┠───[130]public void forceProgramToStop() {forceStop = true;}
+│   │               ┠───[134]public boolean isForceStop() {return forceStop;}
+│   │               ┠───[138]public int getProgress() {return int_progress;}
+│   │               ┠───[142]public int getState() {return state;}
+│   │               ┠───[146]public void setProgress(int progress)
+│   │               ┠───[152]public void setState(int state)
+│   │               ┠───[156]public abstract void initializeSecondStep(Program program) throws jplag.ExitException;
+│   │               ┠───[160]public static void usage()
+│   │               ┠───[189]protected static void printAllLanguages()
+│   │               ┠───[205]public String getClusterTyp()
+│   │               ┠───[216]public String getCountryTag() {return this.countryTag;}
+│   │               ┠───[220]public String getTitle() {return title;}
+│   │               ┗───[224]public void setTitle(String title)
+│   ├───D:javacc
+│   │   └───F:filter.jj
+│   │       ┠───[12]options {}
+│   │       ┠───[17]PARSER_BEGIN(FilterParser)
+│   │       ┠───P:[18]jplag.filter
+│   │       ┠───C:[22]public class FilterParser
+│   │       ┃   ┠───[23]private static jplag.Token javatoken;
+│   │       ┃   ┠───[24]private static int[] table;
+│   │       ┃   ┠───[25]private static boolean[] abgebildet;
+│   │       ┃   ┠───[27]public static int[] parse(String fileName, jplag.Token token,FilterParser parser)
+│   │       ┃   ┠───[39]public static void add(Token pToken, Token pGoalToken)
+│   │       ┃   ┗───[88]private static boolean parseFile(String fileName,FilterParser parser)
+│   │       ┠───[119]PARSER_END(FilterParser)
+│   │       ┠───[124]SKIP :
+│   │       ┠───[137]MORE :
+│   │       ┠───[142]<IN_SINGLE_LINE_COMMENT> \n SPECIAL_TOKEN :
+│   │       ┠───[148]<IN_SINGLE_LINE_COMMENT> \n MORE :
+│   │       ┠───[156]TOKEN :
+│   │       ┠───[168]void File() :
+│   │       ┗───[175]void Line() :
+│   └───D:resources/jplag
+│       ├───D:data
+│       │   ├───F:back.gif
+│       │   ├───F:fields.js
+│       │   ├───F:forward.gif
+│       │   ├───F:help-en.html
+│       │   ├───F:help-sim-en.html
+│       │   └───F:logo.gif
+│       ├───D:options/util
+│       │   └───F:messages_en.properties
+│       └───F:version.properties
+└───D:test
+    ├───D:java/jplag/options/util
+    │   └───F:MessagesTest.java
+    └───D:resources/jplag/options/util
+        └───F:messages_en.properties
